@@ -20,7 +20,8 @@ export const DarkTheme: DefaultTheme = {
     text: '#121212'
   },
   background: darkBackground,
-  heading: '#f0f0f0'
+  heading: '#f0f0f0',
+  mobile: '1000px'
 }
 
 export const LightTheme: DefaultTheme = {
@@ -42,5 +43,6 @@ export const LightTheme: DefaultTheme = {
     text: '#121212'
   },
   background: lightBackground,
-  heading: '#050505'
+  heading: '#050505',
+  mobile: '1000px'
 }

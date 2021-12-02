@@ -21,6 +21,7 @@ declare module 'styled-components' {
             background: string
         },
         background: string,
-        heading: string
+        heading: string,
+        mobile:string
     }
 }

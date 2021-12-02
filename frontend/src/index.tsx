@@ -14,3 +14,5 @@ render(
         <App />
     </Web3ReactProvider>
 , document.getElementById('root'));
+
+// 😏 Luc was here
