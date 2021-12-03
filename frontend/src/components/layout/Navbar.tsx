@@ -14,7 +14,7 @@ import Menu from './Menu';
 const TopBar = styled.div`
     height: 50px;
     background: ${({ theme }) => theme.colors.background};
-    position: sticky;
+    position: absolute;
     top: 0;
     color: ${({ theme }) => theme.heading};
     width: 100%;

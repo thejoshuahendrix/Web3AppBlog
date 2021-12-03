@@ -1,5 +1,5 @@
 {
-  "name": "MERNT2",
+  "name": "Backend Server",
   "version": "1.0.0",
   "scripts": {
     "start": "ts-node-dev ./src/server.ts"

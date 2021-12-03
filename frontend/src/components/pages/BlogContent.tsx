@@ -1,9 +1,8 @@
-import BlogContent from "./BlogContent"
+import React from 'react'
 
-const Blog = () => {
-
+const BlogContent = () => {
     return (
-        <div style={{ padding: '100px'}}>
+        <div style={{ paddingBottom: '100px', margin: '40px' }}>
             <h2> In the field of technology, what has really helped me is guidance from other developers through the use of blog posts. So today I am starting my journey of technical writing and working on putting out blog content for my websites. My first post will be about setting up a basic server for express in Typescript.</h2>
 
             To begin we will use NPM or Yarn depending on your preference.
@@ -138,4 +137,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default BlogContent

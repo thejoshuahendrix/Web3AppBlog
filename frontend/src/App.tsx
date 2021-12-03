@@ -50,7 +50,8 @@ const ContentCard = styled.div`
   background-color: ${({ theme }) => theme.colors.backdrop};
   justify-content: center;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 20%;
   opacity: 0.7;
   border-radius: ${({ theme }) => theme.card.borderRadius};
 `;
@@ -59,7 +60,6 @@ const AppWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   justify-content: center;
   margin: auto;
-  height: 150vh;
 `;
 
 const App = () => {
@@ -84,7 +84,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog isAuth={active} />} />
+                <Route path="/blog" element={<Blog />} />
                 <Route path="/posts" element={<Posts isAuth={active} />} />
               </Routes>
             </ContentCard>
