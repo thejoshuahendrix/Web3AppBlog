@@ -56,11 +56,11 @@ const Blog = () => {
 
             <br /><br />
 
-            <code>npm install chalk cors dotenv express helmet mongoose</code>
+            <code>npm install cors dotenv express helmet mongoose</code>
             <br />
             Or
             <br />
-            <code>yarn add chalk cors dotenv express helmet mongoose</code>
+            <code>yarn add cors dotenv express helmet mongoose</code>
 
 
             <br /><br />
