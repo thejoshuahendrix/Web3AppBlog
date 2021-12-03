@@ -50,11 +50,11 @@ Once we have created our server file we will go ahead and add some dependencies 
 
 
 
-`npm install chalk cors dotenv express helmet mongoose`
+`npm install cors dotenv express helmet mongoose`
 
 Or 
 
-`yarn add chalk cors dotenv express helmet mongoose`
+`yarn add cors dotenv express helmet mongoose`
 
 
 
