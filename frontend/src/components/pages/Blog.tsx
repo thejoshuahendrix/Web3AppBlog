@@ -1,17 +1,24 @@
-import BlogContent from "./BlogContent"
+import styled from "styled-components"
 
+const BlogWrapper = styled.div`
+    padding: 100px;
+
+    @media (max-width:${({theme})=> theme.mobile}){
+        padding: 5px;
+    }
+`
 const Blog = () => {
 
     return (
-        <div style={{ padding: '100px'}}>
+        <BlogWrapper>
             <h2> In the field of technology, what has really helped me is guidance from other developers through the use of blog posts. So today I am starting my journey of technical writing and working on putting out blog content for my websites. My first post will be about setting up a basic server for express in Typescript.</h2>
-
+            <br />
             To begin we will use NPM or Yarn depending on your preference.
-
+            <br />
             First we will create a folder for our desktop
             Open your terminal of choice or use your favorite method to create a folder.
             In your terminal:
-
+            <br /><br />
 
 
             <code>mkdir folder-name</code>
@@ -134,7 +141,7 @@ const Blog = () => {
 
 
             Viola! You have created your basic express server with Typescript that you can now connect to and create routes for! I will be going on in another tutorial to teach you mongoose schemas, routes and controllers.
-        </div>
+        </BlogWrapper>
     )
 }
 

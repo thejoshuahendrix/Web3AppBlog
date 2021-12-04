@@ -5,7 +5,6 @@ export interface TodoI {
     description?: string;
     done: boolean;
     comments: [];
-    likes: number;
 }
 
 const TodoSchema = new mongoose.Schema({

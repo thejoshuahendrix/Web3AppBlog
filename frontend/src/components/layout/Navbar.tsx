@@ -1,12 +1,8 @@
-import { formatUnits } from '@ethersproject/units';
-import { InjectedConnector } from '@web3-react/injected-connector';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
-import styled, { ThemeConsumer, useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { ToggleThemeButton } from '../../App';
-import { useAuth } from '../../hooks/useAuth';
-import { getEtherBalance } from '../AuthTest';
 import Web3Connector from '../Web3Connector';
 import Burger from './Burger';
 import Menu from './Menu';
@@ -37,11 +33,10 @@ export const NavWrapper = styled.div`
     
 `
 const Logo = styled.div`
-    font-size: 32px;
-    display: grid;
-    justify-items: center;
+    font-size: 30px;
     width: 50px;
-    height: 50px;
+    height: 40px;
+    margin-bottom: 20px;
     a:hover{
         color: ${({ theme }) => theme.colors.text};
     }
@@ -49,7 +44,7 @@ const Logo = styled.div`
 export const LinkWrapper = styled.div`
     display:flex;
     justify-content: space-between;
-    padding: 0rem 1rem 0rem 1rem;
+    padding: .3rem 1rem 0rem 1rem;
     height: 50px;
     font-size: 24px;
     gap: 2rem;
@@ -110,9 +105,11 @@ export const GradientWrap = styled.div`
     border-radius: 25px;
     height: 35px;
     font-size: 14px;
-    font-weight: bold;
-    margin: 2.5px;
-    padding: 10px;
+    font-weight: bolder;
+    margin-top: -5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
     padding-bottom: 20px;
 `
 interface Props {
@@ -137,10 +134,11 @@ const Navbar = ({ themeChanger }: Props) => {
 
 
                     {isDesktopOrLaptop && <>
-                        <Link style={{ textDecoration: "none" }} to='/contact'>Contact</Link>
-                        <Link style={{ textDecoration: "none" }} to='/about'>About</Link>
-                        <Link style={{ textDecoration: "none" }} to='/posts'>Posts</Link>
-                        <Link style={{ textDecoration: "none" }} to='/blog'>Blog</Link>
+                        <Link style={{ textDecoration: "none", fontSize:"20px" }} to='/contact'>Contact</Link>
+                        <Link style={{ textDecoration: "none", fontSize:"20px" }} to='/about'>About</Link>
+                        <Link style={{ textDecoration: "none", fontSize:"20px" }} to='/posts'>Posts</Link>
+                        <Link style={{ textDecoration: "none", fontSize:"20px" }} to='/blog1'>Express Blog</Link>
+                        <Link style={{ textDecoration: "none", fontSize:"20px" }} to='/blog2'>MVC Blog</Link>
                         <Web3Connector /> </>
                     }{isTabletOrMobile && <>
                         <Burger open={open} setOpen={setOpen} />

@@ -3,7 +3,7 @@ import { InjectedConnector } from '@web3-react/injected-connector';
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '../hooks/useAuth';
 import { getEtherBalance } from './AuthTest';
-import { ConnectButton, GradientWrap } from './layout/Navbar';
+import { GradientWrap } from './layout/Navbar';
 
 const Web3Connector = () => {
     const [balance, setBalance] = useState("");
@@ -45,7 +45,7 @@ const Web3Connector = () => {
                     Connect Wallet
                 </GradientWrap>}
 
-            {active && balance.toString()}{active && chainId == 1 ? "ETH" : ""}{active && chainId == 137 ? "WETH" : ""}
+            {active && balance.toString()}{active && chainId === 1 ? "ETH" : ""}{active && chainId === 137 ? "WETH" : ""}
             {active && <GradientWrap onClick={deactivate}>Disconnect</GradientWrap>}
         </>
     )

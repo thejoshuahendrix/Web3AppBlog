@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import router from './routes/index';
 import cors from 'cors';
-import bodyParser from 'body-parser';
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;

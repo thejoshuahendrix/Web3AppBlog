@@ -1,9 +1,7 @@
-import { createContext, useReducer, useState } from "react";
+import {  useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled, { DefaultTheme, ThemeProvider } from "styled-components";
-import Burger from "./components/layout/Burger";
 import Hero from "./components/layout/Hero";
-import Menu from "./components/layout/Menu";
 import Navbar from "./components/layout/Navbar";
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
@@ -13,6 +11,7 @@ import Posts from "./components/pages/Posts";
 import { GlobalStyles } from "./global";
 import { DarkTheme, LightTheme } from "./themes";
 import { useAuth } from "./hooks/useAuth";
+import ControllerBlog from "./components/pages/ControllerBlog";
 
 export const ToggleThemeButton = styled.div<{ active: boolean }>`
   background: ${({ theme }) => theme.colors.background};
@@ -54,6 +53,10 @@ const ContentCard = styled.div`
   margin-bottom: 20%;
   opacity: 0.7;
   border-radius: ${({ theme }) => theme.card.borderRadius};
+  @media (max-width:${({theme})=> theme.mobile}) {
+    width: 100%;
+    font-size: 10px;
+  }
 `;
 const AppWrapper = styled.div`
   width: auto;
@@ -65,7 +68,7 @@ const AppWrapper = styled.div`
 const App = () => {
   const [theme, setTheme] = useState<DefaultTheme>(DarkTheme);
   const changeTheme = () => {
-    setTheme(theme == DarkTheme ? LightTheme : DarkTheme);
+    setTheme(theme === DarkTheme ? LightTheme : DarkTheme);
   };
 
   const { active } = useAuth();
@@ -84,7 +87,8 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog1" element={<Blog />} />
+                <Route path="/blog2" element={<ControllerBlog />} />
                 <Route path="/posts" element={<Posts isAuth={active} />} />
               </Routes>
             </ContentCard>

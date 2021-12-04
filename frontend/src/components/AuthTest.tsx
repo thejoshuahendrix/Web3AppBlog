@@ -92,7 +92,7 @@ export const AuthTest = () => {
                 <h3>Balance: {parseFloat(balance).toFixed(5)} {chainId === 1 ? 'ETH' : ''}{chainId === 137 ? 'WETH' : ""}</h3><br /><br />
                 <h3>Current Gas Price: {gas && parseFloat(formatUnits(gas, 9)).toFixed(3)} GWEI</h3><br /><br />
                 <h3>{ethAddress ? "ENS:" + ethAddress : "No ENS name Found"}</h3>
-                <img height="50px" width="50px" src={avatar} /><br /><br />
+                <img height="50px" width="50px" src={avatar} alt="avatar" /><br /><br />
                 <div style={{ display: 'flex', justifyContent: 'center' }}></div>
             </ContentWrapper>
 
